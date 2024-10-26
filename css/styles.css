@@ -112,6 +112,7 @@ label {
 
 input[type="text"],
 input[type="email"],
+input[type="number"],
 textarea {
     width: 100%; /* Los campos ocupan todo el ancho disponible */
     padding: 10px; /* Espacio interno en los campos */
