@@ -1,3 +1,9 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
+
 body {
     margin: 0;
     font-family: Arial, sans-serif; /* Cambia a la fuente deseada */
@@ -151,76 +157,78 @@ a:hover {
     }
 }
 
+/*--------------------FOOTER--------------------*/
 
 footer {
-    background-color: black; /* Fondo negro para el pie de página */
-    color: white; /* Texto blanco */
-    padding: 20px; /* Espacio interno */
-    display: flex; /* Usar flexbox para la disposición */
-    flex-direction: column; /* Disposición en columna */
-    align-items: center; /* Centrar los elementos horizontalmente */
+    background-color: black; 
+    color: white; 
+    padding: 20px; 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center;
 }
 
 aside {
-    width: 100%; /* Asegura que el aside ocupe todo el ancho */
-    display: flex; /* Usar flexbox para el contenido */
-    justify-content: space-between; /* Espacio entre elementos */
-    align-items: flex-start; /* Alinear al principio */
-    margin-bottom: 20px; /* Espacio debajo del aside */
+    width: 100%; 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: flex-start; 
+    margin-bottom: 20px; 
 }
 
 figure {
-    margin: 0; /* Sin márgenes para la figura */
+    margin: 0; 
 }
 
 ul {
-    list-style: none; /* Sin viñetas */
-    padding: 0; /* Sin padding */
-    margin: 0; /* Sin margen */
+    list-style: none;
+    padding: 0; 
+    margin: 0; 
 }
 
 ul > li {
-    margin-bottom: 10px; /* Espacio entre los elementos de la lista */
+    margin-bottom: 10px; 
 }
 
 ul > li > a {
-    color: white; /* Color blanco para los enlaces */
-    text-decoration: none; /* Sin subrayado */
+    color: white;
+    text-decoration: none; 
 }
 
 ul > li > a:hover {
-    text-decoration: underline; /* Subrayar al pasar el ratón */
+    text-decoration: underline;
 }
 
 form {
-    display: flex; /* Usar flexbox para el formulario */
-    flex-direction: column; /* Disposición en columna */
-    margin-top: 10px; /* Espacio encima del formulario */
+    display: flex; 
+    flex-direction: column; 
+    margin-top: 10px; 
 }
 
 input[type="email"],
 input[type="submit"] {
-    padding: 10px; /* Espacio interno en los campos */
-    margin-top: 5px; /* Espacio encima de los campos */
-    border: 1px solid #ccc; /* Borde alrededor de los campos */
-    border-radius: 4px; /* Esquinas redondeadas */
+    padding: 10px; 
+    margin-top: 5px; 
+    border: 1px solid #ccc; 
+    border-radius: 4px; 
 }
 
 input[type="submit"] {
-    background-color: black; /* Color de fondo del botón */
-    color: white; /* Color del texto en el botón */
-    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
-    transition: background-color 0.3s; /* Transición suave para el color de fondo */
+    background-color: black; 
+    color: white; 
+    cursor: pointer;
+    transition: background-color 0.3s; 
 }
 
 input[type="submit"]:hover {
-    background-color: #444; /* Color de fondo del botón al pasar el ratón */
+    background-color: #444;
 }
 
 small {
-    text-align: center; /* Centrar el texto pequeño */
-    margin-top: 20px; /* Espacio encima del texto pequeño */
-}
+    text-align: center; 
+    margin-top: 20px; 
+}/*-----------------------------------------------*/
+
 
 /* Responsivo */
 @media (max-width: 768px) {
@@ -303,3 +311,230 @@ small {
     color: #000;
     font-weight: bold;
 }
+
+/*--------------------CARROUSEL--------------------*/
+.carousel-item {
+    height: 700px; 
+    position: relative;
+    
+}
+
+.carousel-item img {
+    width: auto;
+    height: 100%;
+    max-width: 100%;
+    object-fit: contain;
+
+} .carousel-caption {
+    position: absolute;
+    top: 50%;
+    left: 50;
+    transform: translateY(-50%);
+    text-align: left;
+    color:#000;
+    font-family: 'Lato', Arial, Helvetica, sans-serif;    
+}
+button{
+    padding: 15px;
+    margin-top: 15px;
+    background-color: transparent;
+}
+.titprod{
+    justify-items: center;
+    margin: 50px;
+    font-family: 'Lato', Arial, Helvetica, sans-serif;  
+} /*------------------------------------------------------*/
+
+/*-------------------------CARTAS-------------------------*/
+
+.rowTarjeta {
+    display: flex;
+    
+    flex-wrap: nowrap;
+   
+}
+.containerTarjeta {
+    max-width: 1200px; 
+    margin: 0 auto; 
+    padding: 20px; 
+   
+}
+.card-container {
+    perspective: 1000px;  
+    
+}
+.card {
+    width: 300px;
+    height: 200px;   
+    transform-style: preserve-3d;
+    transition: transform 0s;
+    font-family: 'Roboto Condensed', Arial, Helvetica, sans-serif;        
+}    
+
+.card:hover .card-front {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.card:hover .card-back {
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+.card-back {
+    opacity: 0;   
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 10px;
+    overflow: hidden;
+}
+.card-back p{
+    font-size: 14px;
+}
+
+.card-front {
+    opacity: 1;
+}
+
+.card-front img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+
+.card-back {    
+    opacity: 0;
+    z-index: 1; 
+    align-content: center;  
+}
+.card-back.uno{
+    background-color: #b4ee7277;
+   
+}
+.card-back.dos{
+    background-color: #e09d3877;
+}
+.card-back.tres{
+    background-color: #6ab2d377;
+}
+.card-back.cuatro{
+    background-color: #e2609d77;
+}
+/*------------------------------------------------------*/
+
+.section {
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+    margin-top: 50px;
+}
+
+.section img {
+    width: 40%; 
+    height: auto;
+}
+
+.contentInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 25%; 
+    border-color: white;
+    margin: 10px;
+}
+
+.content div {
+    margin: 20px 0; 
+}
+
+.content h5 {
+    margin-bottom: 5px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.content p {
+    margin: 0;
+    text-align: center;
+}
+H5{
+    COLOR:rgb(199, 161, 122)
+}/*------------------------------------------------------*/
+
+.section-background {
+    position: relative;
+    width: 100%;
+    height: 600px; 
+    background-image: url(../img/yerba5.webp); 
+    background-size: cover;
+    background-position: center;
+}
+
+.section-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    text-align: center;
+}
+
+.section-content h1, .section-content p {
+    margin: 0;}
+
+.fab {
+    color: white;
+    margin: 10px;
+    }
+/*-------------------------TRABAJA EN TDM-----------------------------*/
+
+.form-container1 {
+    display: flex;
+    gap: 20px;
+    padding: 0 200px;
+    margin:  50px;
+    font-family: 'Lato', Arial, Helvetica, sans-serif; 
+    color: rgb(70, 70, 70);
+  }
+  
+  .left-column,
+  .right-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .label1 .textarea1{
+    font-weight: bold;
+  }
+  
+  .input1{
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .textarea {
+    height: 100px;
+    resize: vertical;
+  }
+  .botontdm{
+    background-color: rgb(199, 161, 122);
+    color:rgb(255, 255, 255);
+    width: 100px;
+    border:  rgb(199, 161, 122);
+    margin: 0 0 60px 250px;
+  }
+/*------------------------------------------------------*/
+
