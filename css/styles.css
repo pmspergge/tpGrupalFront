@@ -6,7 +6,7 @@
 
 body {
     margin: 0;
-    font-family: Arial, sans-serif; /* Cambia a la fuente deseada */
+    font-family: Arial, sans-serif; 
 }
 
 .main-header {
@@ -16,16 +16,31 @@ body {
 .header {
     background-color: black;
     color: white;
-    height: 112px; /* Aumento del 40% respecto al original (80px * 1.4) */
+    height: 112px; 
 }
 
 .container {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    height: 100%; /* Asegura que el contenedor ocupe toda la altura */
-    padding: 0 20px; /* Ajusta el padding según sea necesario */
+    align-items: flex-start;
+    height: 100%; 
+    padding: 0 20px; 
 }
+
+.content a {
+    display: flex;
+    align-items: center;
+    color: black; 
+    text-decoration: none; 
+    margin-bottom: 10px; 
+}
+
+.content a i {
+    margin-right: 8px; 
+    font-size: 3em; 
+    color: black;
+}
+
 
 .logo-column {
     flex: 1;
@@ -38,125 +53,124 @@ body {
 .nav {
     list-style: none;
     display: flex;
-    justify-content: center; /* Centra los elementos */
-    align-items: center; /* Alinea verticalmente los elementos */
-    padding: 0;
+    justify-content: center; 
+    align-items: center; 
     margin: 0;
 }
 
 .nav li {
-    margin: 0 15px; /* Espacio entre los elementos del menú */
+    margin: 0 15px; 
 }
 
 .nav a {
     color: white;
     text-decoration: none;
-    text-transform: uppercase; /* Títulos en mayúsculas */
-    font-weight: bold; /* Títulos en negrita */
-    font-size: 10px; /* Tamaño de letra más pequeño */
-    text-align: center; /* Centra el texto */
+    text-transform: uppercase; 
+    font-weight: bold; 
+    font-size: 10px; 
+    text-align: center;
 }
 
 .nav a:hover {
-    color: #ccc; /* Color de hover */
+    color: #ccc; 
 }
 
 .mobile-nav {
-    display: none; /* Oculto por defecto */
+    display: none; 
 }
 
-/* Responsivo */
 @media (max-width: 768px) {
     .nav {
-        flex-direction: column; /* Cambia a columna en móviles */
-        display: none; /* Oculto por defecto */
+        flex-direction: column;
+        display: none;
     }
     .mobile-nav {
-        display: block; /* Mostrar menú en móviles */
+        display: block;
     }
     .mobile-nav.active + .nav {
-        display: flex; /* Mostrar menú al hacer clic */
+        display: flex;
     }
 }
 
-
 .container {
-    max-width: 1200px; /* Limita el ancho máximo del contenedor */
-    margin: 0 auto; /* Centra el contenedor en la página */
-    padding: 20px; /* Espacio alrededor del contenedor */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
 }
 
 .row {
-    display: flex; /* Utiliza flexbox para la disposición */
-    flex-wrap: wrap; /* Permite que los elementos se ajusten a nuevas filas */
-    margin: 0 -15px; /* Espacio negativo para compensar el padding de las columnas */
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
 }
 
 .col-lg-6 {
-    flex: 0 0 50%; /* Cada columna ocupa el 50% del ancho en pantallas grandes */
-    padding: 0 15px; /* Espacio dentro de las columnas */
+    flex: 0 0 50%;
+    padding: 0 15px;
+    display: flex;
+    flex-direction: column;
 }
 
 h4 {
-    margin-bottom: 10px; /* Espacio debajo de los encabezados */
+    margin-bottom: 10px;
 }
 
 .content {
-    padding: 20px; /* Espacio interno en el contenido */
-    border: 1px solid #ccc; /* Opcional: borde para el contenido */
-    border-radius: 8px; /* Esquinas redondeadas opcionales */
+    padding: 20px;
+    border-top: 1px solid #ccc;
+    border-radius: 8px;
+    flex-grow: 1;
 }
 
 form {
-    display: flex; /* Utiliza flexbox para el formulario */
-    flex-direction: column; /* Los elementos del formulario en columna */
+    display: flex;
+    flex-direction: column;
 }
 
 label {
-    margin-bottom: 5px; /* Espacio debajo de las etiquetas */
+    margin-bottom: 5px;
 }
 
 input[type="text"],
 input[type="email"],
 input[type="number"],
 textarea {
-    width: 100%; /* Los campos ocupan todo el ancho disponible */
-    padding: 10px; /* Espacio interno en los campos */
-    margin-top: 5px; /* Espacio encima de los campos */
-    border: 1px solid #ccc; /* Borde alrededor de los campos */
-    border-radius: 4px; /* Esquinas redondeadas para los campos */
+    width: 90%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-right: 2rem;
 }
 
 input[type="submit"] {
-    padding: 10px; /* Espacio interno en el botón */
-    background-color: black; /* Color de fondo del botón */
-    color: white; /* Color del texto en el botón */
-    border: none; /* Sin borde */
-    border-radius: 4px; /* Esquinas redondeadas para el botón */
-    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
-    transition: background-color 0.3s; /* Transición suave para el color de fondo */
+    padding: 10px;
+    background-color: #c7a17a;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
 
 input[type="submit"]:hover {
-    background-color: #444; /* Color de fondo del botón al pasar el ratón */
+    background-color: #444;
 }
 
 a {
-    color: black; /* Color del texto del enlace */
-    text-decoration: none; /* Sin subrayado en los enlaces */
+    color: black;
+    text-decoration: none;
 }
 
 a:hover {
-    text-decoration: underline; /* Subrayar el texto en hover */
+    text-decoration: underline;
 }
 
-/* Responsivo */
 @media (max-width: 768px) {
     .col-lg-6 {
-        flex: 0 0 100%; /* Las columnas ocupan el 100% en pantallas pequeñas */
+        flex: 0 0 100%;
     }
 }
-
 /*--------------------FOOTER--------------------*/
 
 footer {
@@ -214,7 +228,7 @@ input[type="submit"] {
 }
 
 input[type="submit"] {
-    background-color: black; 
+    background-color: #c7a17a ; 
     color: white; 
     cursor: pointer;
     transition: background-color 0.3s; 
@@ -464,7 +478,8 @@ button{
 
 .content p {
     margin: 0;
-    text-align: center;
+    text-align: left;
+    color: #777;
 }
 H5{
     COLOR:rgb(199, 161, 122)
