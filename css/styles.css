@@ -629,3 +629,70 @@ H5{
     padding: 5px;
     border-radius: 5px;
 }
+
+/*------------------------------------------------------*/
+/* Main container para el mapa y sidebar */
+.main-container {
+    display: flex;
+    width: 100%;
+}
+
+/* Sidebar para Locales */
+.sidebar {
+    width: 25%;
+    padding: 1rem;
+    background-color: #f9f9f9;
+    border-right: 1px solid #ddd;
+}
+
+.search-box {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.locales-container {
+    margin-top: 1rem;
+}
+
+.local {
+    margin-bottom: 1.5rem;
+    padding: 0.5rem;
+    border-bottom: 1px solid #ddd;
+}
+
+.local-title {
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.local-address, .local-hours {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.view-details {
+    display: inline-block;
+    margin-top: 0.5rem;
+    padding: 0.3rem 0.6rem;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.view-details:hover {
+    background-color: #388e3c;
+}
+
+/* Mapa */
+.map {
+    width: 75%;
+    height: 80vh;
+}
+
