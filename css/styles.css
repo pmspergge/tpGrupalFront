@@ -359,7 +359,7 @@ button{
     font-family: 'Lato', Arial, Helvetica, sans-serif;  
 } /*------------------------------------------------------*/
 
-/*-------------------------CARTAS-------------------------*/
+/*-------------------------CARTAS INDEX-------------------------*/
 
 .rowTarjeta {
     display: flex;
@@ -430,8 +430,7 @@ button{
     align-content: center;  
 }
 .card-back.uno{
-    background-color: #b4ee7277;
-   
+    background-color: #b4ee7277;   
 }
 .card-back.dos{
     background-color: #e09d3877;
@@ -441,6 +440,105 @@ button{
 }
 .card-back.cuatro{
     background-color: #e2609d77;
+}
+/*------------------------------------------------------*/
+/*-------------------------CARTAS TIENDA-------------------------*/
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.titulo-productos h3 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.contenedor-tarjetas {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+}
+
+.fila-tarjetas {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    max-width: 1200px;
+    margin-bottom: 20px;
+}
+
+.col-4 {
+    flex: 0 0 30%;
+    max-width: 30%;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+.tarjeta-contenedor {
+    perspective: 1000px;
+}
+
+.tarjeta {
+    width: 300px;
+    height: 300px;   
+    transform-style: preserve-3d;
+    transition: transform 1.5s;
+    font-family: 'Roboto Condensed', Arial, Helvetica, sans-serif; 
+    border: 2px solid #555;
+    border-radius: 15px; 
+    
+}
+
+.tarjeta-frontal, .tarjeta-trasera {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+.tarjeta-frontal img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    border-radius: 15px; 
+}
+
+.tarjeta-trasera {
+    transform: rotateY(180deg); 
+    padding: 20px; 
+    box-sizing: border-box;   
+    justify-content: center; 
+    align-items: center; 
+    text-align: center;
+}
+
+.tarjeta-contenedor:hover .tarjeta {
+    transform: rotateY(180deg);
+}
+
+.mt-5 {
+    margin-top: 3rem;
+}
+
+.mt-4 {
+    margin-top: 2rem;
+}
+.descripcion-link { 
+    text-decoration: none; 
+    color: #555; 
+    font-weight: bold; 
+    margin-top: 15px;
+    text-align: center;
+    display: block;
+ }
+
+.titulo-tienda{
+    margin-top: 40px;
 }
 /*------------------------------------------------------*/
 
